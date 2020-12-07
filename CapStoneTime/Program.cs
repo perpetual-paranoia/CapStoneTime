@@ -205,7 +205,7 @@ namespace CapStoneTime
             foreach (int kill in bullet)
             for (int index = 0; index < rooms; index++)
             {
-                Console.WriteLine("$" + kill * twoheight * COST);
+                    Console.WriteLine("$" + kill * twoheight * COST);
             }
 
             ContinuePrompt();
