@@ -6,6 +6,14 @@ using System.Threading.Tasks;
 
 namespace CapStoneTime
 {
+    //********************************************
+    //title: Finding the cost of a house
+    //application type: console
+    //description: finding the caost of painting a whole house
+    //author: payne r, patrick
+    //date created: 12/6/2020
+    //last modified: 12/6/2020
+    //********************************************
     class Program
     {
         static void Main(string[] args)
@@ -21,7 +29,7 @@ namespace CapStoneTime
             Console.WriteLine();
             Console.WriteLine("\t\tFinding the Cost of a House");
             Console.WriteLine();
-            Console.WriteLine("\t\t  Program by Patrick Payne");
+            Console.WriteLine("\t\t  Application by Patrick Payne");
             Console.WriteLine();
             Console.WriteLine();
             ContinuePrompt();
@@ -199,15 +207,30 @@ namespace CapStoneTime
 
             int twoheight = 2 * Height;
             const int COST = 6;
-
-            Console.WriteLine("The cost of the house is: ");
-            int[] bullet = length.Concat(width).ToArray();
-            foreach (int kill in bullet)
-            for (int index = 0; index < rooms; index++)
+            int precost;
+            int total = 0;            
+            foreach (int prelength in length)
             {
-                    Console.WriteLine("$" + kill * twoheight * COST);
+                foreach (int prewidth in width)
+                {
+                    precost = (prelength * prewidth);
+                    total = precost * twoheight * COST;
+                }                
             }
+            Console.WriteLine("The cost of the house is: $" + total);
 
+            ContinuePrompt();
+            exit();
+            
+        }
+
+        static void exit()
+        {
+            Console.Clear();
+            Console.WriteLine();
+            Console.WriteLine("\t\tThank you for using the application.");
+            Console.WriteLine();
+            Console.WriteLine("\t\t I hope it was somewhat useful.");
             ContinuePrompt();
         }
 
